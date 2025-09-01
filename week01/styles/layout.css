@@ -19,6 +19,11 @@ nav {
     padding: 1rem;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
 header {
     grid-column: 1/-1;
     color: white;
