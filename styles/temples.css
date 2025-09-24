@@ -29,7 +29,7 @@ header {
     padding: 0 1rem;
 }
 
-header span {
+h1 {
     color: var(--secondary-color);
     font-size: 1.5rem;
     font-family: var(--header-font);
@@ -102,7 +102,7 @@ nav ul.open {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-h1, .main-heading {
+h2, .main-heading {
     color: #222;
     font-family: var(--header-font);
     padding: 1rem 0 1rem 0;
