@@ -87,6 +87,27 @@ main {
     gap: 0.5em;
 }
 
+@media (min-width: 900px) {
+  .card-header.weather-header::after {
+    content: '';
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background: url('../images/weather-icon.svg') no-repeat center/contain;
+    margin-left: 0.5em;
+    vertical-align: middle;
+  }
+  .weather-card .card-header img {
+    display: none;
+  }
+}
+
+.weather-card .card-header img {
+    display: inline-block;
+    height: 1.5em;
+    vertical-align: middle;
+}
+
 .data-card ul, .weather-card ul {
     list-style: none;
     padding: 0;
