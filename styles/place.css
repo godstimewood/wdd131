@@ -1,0 +1,161 @@
+:root {
+    --primary-color: #d32f2f;
+    --secondary-color: #fff;
+    --body-font: 'Lato', Arial, sans-serif;
+    --header-font: 'Montserrat', sans-serif;
+    --text-color: #222;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+main {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-color);
+    overflow: hidden;
+}
+
+.background-img {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.85);
+}
+
+.data-card, .weather-card {
+    position: absolute;
+    top: 2rem;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    border-radius: 6px;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    min-width: 270px;
+    z-index: 2;
+}
+
+.data-card {
+    left: 2rem;
+}
+
+.weather-card {
+    right: 2rem;
+}
+
+.weather-icon {
+    height: 1.5em;
+    vertical-align: middle;
+}
+
+.card-header {
+    background: #218c4a;
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-family: var(--header-font);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px 0 0 0;
+    margin: -1.5rem -2rem 1rem -2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+@media (min-width: 900px) {
+  .card-header.weather-header::after {
+    content: '';
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background: url('../images/weather-icon.svg') no-repeat center/contain;
+    margin-left: 0.5em;
+    vertical-align: middle;
+  }
+  .weather-card .card-header img {
+    display: none;
+  }
+}
+
+.weather-card .card-header img {
+    display: inline-block;
+    height: 1.5em;
+    vertical-align: middle;
+}
+
+.data-card ul, .weather-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.data-card li, .weather-card li {
+    margin-bottom: 0.5em;
+    font-size: 1.05rem;
+}
+
+footer {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1.2rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+footer span {
+    margin: 0 0.3em;
+}  
+
+#lastModified {
+    color: gold;
+    font-size: 0.95em;
+}
+
+@media (max-width: 900px) {
+  .data-card, .weather-card {
+    position: static;
+    margin: 1.5rem auto;
+    display: block;
+    width: 90%;
+    min-width: unset;
+  }
+  main {
+    flex-direction: column;
+    min-height: unset;
+    padding: 2rem 0;
+  }
+  .background-img {
+    position: static;
+    width: 100vw;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    filter: brightness(0.85);
+  }
+}
